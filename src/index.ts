@@ -16,8 +16,8 @@ export default {
         response.headers.append('cross-origin-resource-policy', 'cross-origin');
         response.headers.append('timing-allow-origin', '*');
         // Super aggressive cache this for a day please
-        response.headers.set('cache-control', 'public, max-age: 86400');
-        response.headers.set('expires', new Date(new Date().getTime() + 86400000).toUTCString());
+        response.headers.set('cache-control', 'public, max-age: 604800');
+        response.headers.set('expires', new Date(new Date().getTime() + 604800000).toUTCString());
         return response;
       } catch (e) {
         // Not found? Not worth mentioning
